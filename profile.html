@@ -18,26 +18,25 @@
         <div class="wrapper header">
             <div class="logo">
                 <div class="logo-wrapper">
-                    <img src="img/sample-loho-hb.png" alt="logo Hari Baik">
+                    <img src="img/sample-loho-hb.png" alt="">
                 </div>
             </div>
             <nav>
                 <div class="nav-menu">
                     <div class="nav-items"><a href="index.html">Home</a></div>
                     <div class="nav-items"><a href="profile.html">Our Profile</a></div>
-                    <div class="nav-items">Portfolio</div>
+                    <div class="nav-items"><a href="portfolio.html">Portfolio</a></div>
                     <div class="nav-items">Message Us</div>
                 </div>
-                <!-- <div class="nav-text">
-                    <p>Hi Name </p> <img src="img/waving-hand.png" alt="waving had" class="icon-welcome"> <p>
-                </div> -->
             </nav>
         </div>
     </header>
     <main>
         <section id="profile-section">
             <div class="banner">
-                <img src="img/rings.jpg" alt="">
+                <img class="img-slideshow" src="img/rings.jpg" alt="rings">
+                <img class="img-slideshow" src="img/chair-1.jpg" alt="chair">
+                <img class="img-slideshow" src="img/shoes.jpg" alt="shoes">
             </div>
         </section>
         <section id="about-section">
@@ -45,7 +44,7 @@
                 <div class="profile-container">
                     <div class="about-text">
                         <h1>Kami adalah Wedding Planner</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro placeat, nemo possimus eum recusandae, suscipit, dolorum ipsam laborum laboriosam error voluptatibus quaerat sunt modi? Maiores reiciendis, nihil doloribus sint, distinctio sit numquam suscipit ut consectetur, veritatis cumque vero consequatur corrupti! A vitae dicta tempora modi placeat, nulla culpa beatae nam. </p>
+                        <p>Hari Baik adalah sebuah wedding planner, dimana kami melayani klien untuk merencanakan pernikahan, mulai dari lamaran, pengajian, akad nikah dan walimatul 'ursy sesuai syari'at islam. </p>
                     </div>
                     <div class="about-img">
                         <div class="about-img-wrapper"><img src="img/table.jpg" alt="table wedding"> </div>
@@ -64,12 +63,10 @@
                 <div class="visi-content">
                     <div class="visi-content-text">
                         <div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis libero in esse odio. Assumenda, non. </p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quasi.</p>
+                            <p>Visi kami adalah untuk memberikan pelayanan yang paling baik kepada klien-klien kami. dan kami juga berusaha semaksimal mungkin untuk mengerti keinginan dan tujuan dari klien sehingga klien akan puas ketika bekerja sama dengan kami </p>
                         </div>
                         <div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis libero in esse odio. Assumenda, non. </p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quasi.</p>
+                            <p>Sedangkan Misi kami adalah membuat Hari Baik menjadi sebuah wedding planner yang syar'i yang terbaik dan terpercaya. </p>
                         </div>
                     </div>
                     <div class="visi-img"><img src="img/flower2.jpg" alt="flower"> </div>
@@ -82,5 +79,21 @@
             <p>Hari Baik Website &copy; 2023</p>
         </div>
     </footer>
+    <script>
+        let slideIndex = 0
+        carousel()
+
+        function carousel() {
+            var i
+            var imgList = document.getElementsByClassName("img-slideshow")
+            for (i = 0; i < imgList.length; i++) {
+                imgList[i].style.display = "none"
+            }
+            slideIndex++
+            if (slideIndex > imgList.length) {slideIndex = 1}
+            imgList[slideIndex - 1].style.display = "block"
+            setTimeout(carousel, 2000)
+        }
+    </script>
 </body>
 </html>

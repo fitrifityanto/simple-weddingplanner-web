@@ -4,7 +4,7 @@
 }
 
 .banner {
-    height: 300px;
+    height: 350px;
 }
 
 .banner > img {
@@ -33,7 +33,7 @@
 .about-img {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(11, minmax(36px, 1fr));
+    grid-template-columns: repeat(11, minmax(20px, 1fr));
     grid-template-rows: repeat(9, 36px);
 }
 
@@ -97,7 +97,7 @@
 }
 
 #visi-misi-section {
-    background-image: linear-gradient(to bottom, #ecdec9 70%, #e6e9f5 30%);
+    background-image: linear-gradient(to bottom, #ecdec9 40%, #e6e9f5 70%);
     background-color: #ecdec9;
     margin-bottom: 2em;
 }
@@ -112,5 +112,9 @@
 
     .visi-content-text {
         flex-direction: row;
+    }
+
+    .visi-content-text > div {
+        flex: 1;
     }
 }

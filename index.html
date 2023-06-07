@@ -11,20 +11,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <header>
         <div class="wrapper header">
             <div class="logo">
                 <div class="logo-wrapper">
-                    <img src="img/sample-loho-hb.png" alt="logo Hari Baik">
+                    <img src="img/sample-loho-hb.png" alt="">
                 </div>
             </div>
             <nav>
                 <div class="nav-menu">
                     <div class="nav-items"><a href="index.html">Home</a></div>
                     <div class="nav-items"><a href="profile.html">Our Profile</a></div>
-                    <div class="nav-items">Portfolio</div>
+                    <div class="nav-items"><a href="portfolio.html">Portfolio</a></div>
                     <div class="nav-items">Message Us</div>
                 </div>
                 <div class="nav-text">
@@ -32,13 +34,6 @@
                 </div>
             </nav>
         </div>
-        <script>
-            function getName() {
-                let name = prompt("Silahkan masukkan nama Kamu")
-                document.getElementById("yourName").innerText = name
-            }
-            getName()
-        </script>
     </header>
     <main>
         <section id="hero-section">
@@ -95,14 +90,14 @@
                 </div>
                 <div class="message-content">
                     <div class="message-form">
-                        <form action="">
+                        <form action="" name="message-form" onsubmit="return validateForm()">
                             <div class="input-item">
-                                <label for="name" class="label">Nama</label>
-                                <input type="text" name="name" id="name" placeholder="Nama"  /> 
+                                <label for="full-name" class="label">Nama</label>
+                                <input type="text" name="full-name" id="full-name" placeholder="Nama"  /> 
                             </div>
                             <div class="input-item">
-                                <label for="birthDate" class="label">Tanggal lahir</label>
-                                <input type="date" name="birthDate" id="birthDate" placeholder="Tanggal Lahir" />
+                                <label for="birth-date" class="label">Tanggal lahir</label>
+                                <input type="date" name="birth-date" id="birth-date" placeholder="Tanggal Lahir" />
                             </div>
                             <div class="input-item">
                                 <div class="label">
@@ -125,7 +120,25 @@
                             </div>
                         </form>
                     </div>
-                    <div class="message-box"></div>
+                    <div class="message-box">
+                        <div><span id="currentDate"></span> </div>
+                        <div>
+                            <div>Nama</div>
+                            <div>: <span id="sender-full-name"></span> </div>
+                        </div>
+                        <div>
+                            <div>Tanggal Lahir</div>
+                            <div>: <span id="sender-birth-date"></span> </div>
+                        </div>
+                        <div>
+                            <div>Jenis Kelamin</div>
+                            <div>: <span id="sender-gender"></span> </div>
+                        </div>
+                        <div>
+                            <div>Pesan</div>
+                            <div>: <span id="sender-messages"></span> </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -135,5 +148,6 @@
             <p>Hari Baik Website &copy; 2023</p>
         </div>
     </footer>
+    <script src="js/index.js" defer></script>
 </body>
 </html>
